@@ -3191,7 +3191,7 @@ declare namespace ts {
         excludeDirectories?: string[];
         excludeFiles?: string[];
         watchFactory?: string | PluginImport;
-        [option: string]: CompilerOptionsValue | undefined;
+        [option: string]: CompilerOptionsValue | Function | undefined;
     }
     interface TypeAcquisition {
         enable?: boolean;

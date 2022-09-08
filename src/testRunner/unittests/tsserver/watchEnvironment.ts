@@ -550,12 +550,12 @@ describe("unittests:: tsserver:: watchEnvironment:: watchFile is single watcher 
                 // Add c.ts
                 session.logger.info("Add a file");
                 host.writeFile(`/user/username/projects/myproject/c.ts`, aTs.content);
-                // // Since we have overriden watch, this shouldnt do anything
-                // host.checkTimeoutQueueLength(0);
+                // Since we have overriden watch, this shouldnt do anything
+                host.checkTimeoutQueueLength(0);
 
-                // // Actually invoke watches
-                // session.logger.info("Invoke plugin watches");
-                // plugin.watchedDirectoriesRecursive.get("/user/username/projects/myproject")!.forEach(({ callback }) => callback(`/user/username/projects/myproject/c.ts`));
+                // Actually invoke watches
+                session.logger.info("Invoke plugin watches");
+                plugin.watchedDirectoriesRecursive.get("/user/username/projects/myproject")!.forEach(({ callback }) => callback(`/user/username/projects/myproject/c.ts`));
                 // Host should have updates queued
                 host.runQueuedTimeoutCallbacks();
 
@@ -576,12 +576,12 @@ describe("unittests:: tsserver:: watchEnvironment:: watchFile is single watcher 
                 // Change b.ts
                 session.logger.info("Change file");
                 host.writeFile(bTs.path, aTs.content);
-                // // Since we have overriden watch, this shouldnt do anything
-                // host.checkTimeoutQueueLength(0);
+                // Since we have overriden watch, this shouldnt do anything
+                host.checkTimeoutQueueLength(0);
 
                 // // Actually invoke watches
-                // session.logger.info("Invoke plugin watches");
-                // plugin.watchedFiles.get(bTs.path)!.forEach(({ callback }) => callback(bTs.path, ts.FileWatcherEventKind.Changed));
+                session.logger.info("Invoke plugin watches");
+                plugin.watchedFiles.get(bTs.path)!.forEach(({ callback }) => callback(bTs.path, ts.FileWatcherEventKind.Changed));
                 // Host should have updates queued
                 host.runQueuedTimeoutCallbacks();
 
@@ -609,24 +609,24 @@ describe("unittests:: tsserver:: watchEnvironment:: watchFile is single watcher 
                 // Add c.ts
                 session.logger.info("Add a file");
                 host.writeFile(`/user/username/projects/myproject/c.ts`, aTs.content);
-                // // Since we have overriden watch, this shouldnt do anything
-                // host.checkTimeoutQueueLength(0);
+                // Since we have overriden watch, this shouldnt do anything
+                host.checkTimeoutQueueLength(0);
 
-                // // Actually invoke watches
-                // session.logger.info("Invoke plugin watches");
-                // plugin.watchedDirectoriesRecursive.get("/user/username/projects/myproject")!.forEach(({ callback }) => callback(`/user/username/projects/myproject/c.ts`));
+                // Actually invoke watches
+                session.logger.info("Invoke plugin watches");
+                plugin.watchedDirectoriesRecursive.get("/user/username/projects/myproject")!.forEach(({ callback }) => callback(`/user/username/projects/myproject/c.ts`));
                 // Host should have updates queued
                 host.runQueuedTimeoutCallbacks();
 
                 // Change b.ts
                 session.logger.info("Change file");
                 host.writeFile(bTs.path, aTs.content);
-                // // Since we have overriden watch, this shouldnt do anything
-                // host.checkTimeoutQueueLength(0);
+                // Since we have overriden watch, this shouldnt do anything
+                host.checkTimeoutQueueLength(0);
 
-                // // Actually invoke watches
-                // session.logger.info("Invoke plugin watches");
-                // plugin2.watchedFiles.get(bTs.path)!.forEach(({ callback }) => callback(bTs.path, ts.FileWatcherEventKind.Changed));
+                // Actually invoke watches
+                session.logger.info("Invoke plugin watches");
+                plugin2.watchedFiles.get(bTs.path)!.forEach(({ callback }) => callback(bTs.path, ts.FileWatcherEventKind.Changed));
                 // Host should have updates queued
                 host.runQueuedTimeoutCallbacks();
 
