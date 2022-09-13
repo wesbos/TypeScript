@@ -260,6 +260,7 @@ Info 56   [00:01:54.000] request:
       "seq": 3,
       "type": "request"
     }
+Custom:: onConfigurationChanged:: {"extraData":"myData"}
 Info 57   [00:01:55.000] response:
     {"seq":0,"type":"response","command":"configurePlugin","request_seq":3,"success":true,"performanceData":{"updateGraphDurationMs":*}}
 Info 58   [00:01:56.000] response:
@@ -282,6 +283,7 @@ Info 59   [00:01:57.000] request:
       "seq": 4,
       "type": "request"
     }
+Custom:: myplugin2onConfigurationChanged:: {"extraData":"myData"}
 Info 60   [00:01:58.000] response:
     {"seq":0,"type":"response","command":"configurePlugin","request_seq":4,"success":true,"performanceData":{"updateGraphDurationMs":*}}
 Info 61   [00:01:59.000] response:

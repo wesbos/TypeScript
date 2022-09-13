@@ -207,6 +207,7 @@ Info 40   [00:01:23.000] request:
       "seq": 3,
       "type": "request"
     }
+Custom:: onConfigurationChanged:: {"extraData":"myData"}
 Info 41   [00:01:24.000] response:
     {"seq":0,"type":"response","command":"configurePlugin","request_seq":3,"success":true,"performanceData":{"updateGraphDurationMs":*}}
 Info 42   [00:01:25.000] response:
