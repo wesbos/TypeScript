@@ -84,7 +84,7 @@ Info 10   [00:00:33.000] For info: /user/username/projects/myproject/a.ts :: Con
 Info 11   [00:00:34.000] Creating configuration project /user/username/projects/myproject/tsconfig.json
 Info 12   [00:00:35.000] FileWatcher:: Added:: WatchInfo: /user/username/projects/myproject/tsconfig.json 2000 {"watchFactory":{"name":"myplugin","myconfig":"somethingelse"}} Project: /user/username/projects/myproject/tsconfig.json WatchType: Config file
 CustomRequire:: Resolving myplugin from /a/pluginprobe1/node_modules
-Require:: Module myplugin created with config: {"name":"myplugin","myconfig":"somethingelse"} and options: {"watchFactory":{"name":"myplugin","myconfig":"somethingelse"}}
+Require:: Module myplugin created with config: {"init":"initialConfig","name":"myplugin"} and options: {"watchFactory":{"name":"myplugin","myconfig":"somethingelse"}}
 Custom watchFile: /user/username/projects/myproject/tsconfig.json 2000 {"watchFactory":{"name":"myplugin","myconfig":"somethingelse"}}
 Info 13   [00:00:36.000] Config: /user/username/projects/myproject/tsconfig.json : {
  "rootNames": [
