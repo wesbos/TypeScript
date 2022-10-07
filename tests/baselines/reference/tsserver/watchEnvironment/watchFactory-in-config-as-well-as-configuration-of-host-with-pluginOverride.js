@@ -102,7 +102,7 @@ Info 12   [00:00:35.000] Search path: /user/username/projects/myproject
 Info 13   [00:00:36.000] For info: /user/username/projects/myproject/a.ts :: Config file name: /user/username/projects/myproject/tsconfig.json
 Info 14   [00:00:37.000] Creating configuration project /user/username/projects/myproject/tsconfig.json
 Info 15   [00:00:38.000] FileWatcher:: Added:: WatchInfo: /user/username/projects/myproject/tsconfig.json 2000 {"watchFactory":"myplugin2"} Project: /user/username/projects/myproject/tsconfig.json WatchType: Config file
-CustomRequire:: Resolving myplugin2 from /a/lib/tsc.js/../../../node_modules
+CustomRequire:: Resolving myplugin2 from /a/pluginprobe1/node_modules
 Require:: Module myplugin2 created with config: {"name":"myplugin2"} and options: {"watchFactory":"myplugin2"}
 Custom myplugin2watchFile: /user/username/projects/myproject/tsconfig.json 2000 {"watchFactory":"myplugin2"}
 Info 16   [00:00:39.000] Config: /user/username/projects/myproject/tsconfig.json : {
@@ -119,7 +119,7 @@ Info 16   [00:00:39.000] Config: /user/username/projects/myproject/tsconfig.json
 }
 Info 17   [00:00:40.000] FileWatcher:: Close:: WatchInfo: /user/username/projects/myproject/tsconfig.json 2000 {"watchFactory":"myplugin2"} Project: /user/username/projects/myproject/tsconfig.json WatchType: Config file
 Info 18   [00:00:41.000] FileWatcher:: Added:: WatchInfo: /user/username/projects/myproject/tsconfig.json 2000 {"watchFactory":"myplugin"} Project: /user/username/projects/myproject/tsconfig.json WatchType: Config file
-CustomRequire:: Resolving myplugin from /a/lib/tsc.js/../../../node_modules
+CustomRequire:: Resolving myplugin from /a/pluginprobe1/node_modules
 Require:: Module myplugin created with config: {"name":"myplugin"} and options: {"watchFactory":"myplugin"}
 Custom watchFile: /user/username/projects/myproject/tsconfig.json 2000 {"watchFactory":"myplugin"}
 Info 19   [00:00:42.000] DirectoryWatcher:: Added:: WatchInfo: /user/username/projects/myproject 1 {"watchFactory":"myplugin"} Config: /user/username/projects/myproject/tsconfig.json WatchType: Wild card directory

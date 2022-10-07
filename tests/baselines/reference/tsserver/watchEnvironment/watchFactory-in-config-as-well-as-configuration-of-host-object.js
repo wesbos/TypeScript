@@ -61,7 +61,7 @@ Info 6    [00:00:29.000] Search path: /user/username/projects/myproject
 Info 7    [00:00:30.000] For info: /user/username/projects/myproject/a.ts :: Config file name: /user/username/projects/myproject/tsconfig.json
 Info 8    [00:00:31.000] Creating configuration project /user/username/projects/myproject/tsconfig.json
 Info 9    [00:00:32.000] FileWatcher:: Added:: WatchInfo: /user/username/projects/myproject/tsconfig.json 2000 {"watchFactory":{"name":"myplugin2","myconfig":"somethingelse"}} Project: /user/username/projects/myproject/tsconfig.json WatchType: Config file
-CustomRequire:: Resolving myplugin2 from /a/lib/tsc.js/../../../node_modules
+CustomRequire:: Resolving myplugin2 from /a/pluginprobe1/node_modules
 Require:: Module myplugin2 created with config: {"name":"myplugin2","myconfig":"somethingelse"} and options: {"watchFactory":{"name":"myplugin2","myconfig":"somethingelse"}}
 Custom myplugin2watchFile: /user/username/projects/myproject/tsconfig.json 2000 {"watchFactory":{"name":"myplugin2","myconfig":"somethingelse"}}
 Info 10   [00:00:33.000] Config: /user/username/projects/myproject/tsconfig.json : {
@@ -81,7 +81,7 @@ Info 10   [00:00:33.000] Config: /user/username/projects/myproject/tsconfig.json
 }
 Info 11   [00:00:34.000] FileWatcher:: Close:: WatchInfo: /user/username/projects/myproject/tsconfig.json 2000 {"watchFactory":{"name":"myplugin2","myconfig":"somethingelse"}} Project: /user/username/projects/myproject/tsconfig.json WatchType: Config file
 Info 12   [00:00:35.000] FileWatcher:: Added:: WatchInfo: /user/username/projects/myproject/tsconfig.json 2000 {"watchFactory":{"name":"myplugin","myconfig":"somethingelse"}} Project: /user/username/projects/myproject/tsconfig.json WatchType: Config file
-CustomRequire:: Resolving myplugin from /a/lib/tsc.js/../../../node_modules
+CustomRequire:: Resolving myplugin from /a/pluginprobe1/node_modules
 Require:: Module myplugin created with config: {"name":"myplugin","myconfig":"somethingelse"} and options: {"watchFactory":{"name":"myplugin","myconfig":"somethingelse"}}
 Custom watchFile: /user/username/projects/myproject/tsconfig.json 2000 {"watchFactory":{"name":"myplugin","myconfig":"somethingelse"}}
 Info 13   [00:00:36.000] DirectoryWatcher:: Added:: WatchInfo: /user/username/projects/myproject 1 {"watchFactory":{"name":"myplugin","myconfig":"somethingelse"}} Config: /user/username/projects/myproject/tsconfig.json WatchType: Wild card directory

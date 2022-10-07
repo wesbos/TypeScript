@@ -72,7 +72,7 @@ Info 9    [00:00:32.000] Config: /user/username/projects/myproject/tsconfig.json
 }
 Info 10   [00:00:33.000] FileWatcher:: Close:: WatchInfo: /user/username/projects/myproject/tsconfig.json 2000 undefined Project: /user/username/projects/myproject/tsconfig.json WatchType: Config file
 Info 11   [00:00:34.000] FileWatcher:: Added:: WatchInfo: /user/username/projects/myproject/tsconfig.json 2000 {"watchFactory":"myplugin"} Project: /user/username/projects/myproject/tsconfig.json WatchType: Config file
-CustomRequire:: Resolving myplugin from /a/lib/tsc.js/../../../node_modules
+CustomRequire:: Resolving myplugin from /a/pluginprobe1/node_modules
 Require:: Module myplugin created with config: {"name":"myplugin"} and options: {"watchFactory":"myplugin"}
 Custom watchFile: /user/username/projects/myproject/tsconfig.json 2000 {"watchFactory":"myplugin"}
 Info 12   [00:00:35.000] DirectoryWatcher:: Added:: WatchInfo: /user/username/projects/myproject 1 {"watchFactory":"myplugin"} Config: /user/username/projects/myproject/tsconfig.json WatchType: Wild card directory

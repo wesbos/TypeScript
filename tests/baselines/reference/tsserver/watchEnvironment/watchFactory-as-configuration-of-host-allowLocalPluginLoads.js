@@ -58,7 +58,7 @@ Info 6    [00:00:29.000] Search path: /user/username/projects/myproject
 Info 7    [00:00:30.000] For info: /user/username/projects/myproject/a.ts :: Config file name: /user/username/projects/myproject/tsconfig.json
 Info 8    [00:00:31.000] Creating configuration project /user/username/projects/myproject/tsconfig.json
 Info 9    [00:00:32.000] FileWatcher:: Added:: WatchInfo: /user/username/projects/myproject/tsconfig.json 2000 {"watchFactory":"myplugin"} Project: /user/username/projects/myproject/tsconfig.json WatchType: Config file
-CustomRequire:: Resolving myplugin from /a/lib/tsc.js/../../../node_modules
+CustomRequire:: Resolving myplugin from /a/pluginprobe1/node_modules
 Require:: Module myplugin created with config: {"name":"myplugin"} and options: {"watchFactory":"myplugin"}
 Custom watchFile: /user/username/projects/myproject/tsconfig.json 2000 {"watchFactory":"myplugin"}
 Info 10   [00:00:33.000] Config: /user/username/projects/myproject/tsconfig.json : {
