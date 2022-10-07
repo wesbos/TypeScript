@@ -22,7 +22,7 @@ interface String { charAt: any; }
 interface Array<T> { length: number; [n: number]: T; }
 
 
-/a/lib/tsc.js -w --extendedDiagnostics --watchFactory myplugin/../malicious
+/a/lib/tsc.js -w --extendedDiagnostics --watchFactory {"name":"myplugin/../malicious","myconfig":"somethingelse"}
 Output::
 error TS5107: 'watchFactory' name can only be a package name.
 

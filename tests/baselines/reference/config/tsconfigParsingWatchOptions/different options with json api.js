@@ -129,4 +129,35 @@ Input:: {
 Result: WatchOptions::
 {}
 Result: Errors::
-[91merror[0m[90m TS5096: [0m'watchFactory' name can only be a package name.
+[91merror[0m[90m TS5107: [0m'watchFactory' name can only be a package name.
+
+Input:: {
+ "watchOptions": {
+  "watchFactory": {
+   "name": "somefactory",
+   "myconfig": "somethingelse"
+  }
+ },
+ "compileOnSave": false
+}
+Result: WatchOptions::
+{
+ "watchFactory": {
+  "name": "somefactory",
+  "myconfig": "somethingelse"
+ }
+}
+Result: Errors::
+
+Input:: {
+ "watchOptions": {
+  "watchFactory": {
+   "name": "somefactory/../malicious"
+  }
+ },
+ "compileOnSave": false
+}
+Result: WatchOptions::
+{}
+Result: Errors::
+[91merror[0m[90m TS5107: [0m'watchFactory' name can only be a package name.

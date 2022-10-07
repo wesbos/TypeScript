@@ -28,14 +28,17 @@ Info 1    [00:00:24.000] request:
       "command": "configure",
       "arguments": {
         "watchOptions": {
-          "watchFactory": "myplugin/../malicious"
+          "watchFactory": {
+            "name": "myplugin/../malicious",
+            "myconfig": "somethingelse"
+          }
         }
       },
       "seq": 1,
       "type": "request"
     }
 Info 2    [00:00:25.000] Host watch options changed to {}, it will be take effect for next watches.
-Info 3    [00:00:26.000] Watch options supplied had errors: Supplied options: {"watchFactory":"myplugin/../malicious"}
+Info 3    [00:00:26.000] Watch options supplied had errors: Supplied options: {"watchFactory":{"name":"myplugin/../malicious","myconfig":"somethingelse"}}
 Info 4    [00:00:27.000] Diagnostics:: error TS5107: 'watchFactory' name can only be a package name.
 
 Info 5    [00:00:28.000] response:

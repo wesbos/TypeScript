@@ -125,7 +125,43 @@ Input:: {
 Result: WatchOptions::
 {}
 Result: Errors::
-[96mtsconfig.json[0m:[93m1[0m:[93m33[0m - [91merror[0m[90m TS5096: [0m'watchFactory' name can only be a package name.
+[96mtsconfig.json[0m:[93m1[0m:[93m33[0m - [91merror[0m[90m TS5107: [0m'watchFactory' name can only be a package name.
 
 [7m1[0m {"watchOptions":{"watchFactory":"somefactory/../malicious"}}
 [7m [0m [91m                                ~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+Input:: {
+ "watchOptions": {
+  "watchFactory": {
+   "name": "somefactory",
+   "myconfig": "somethingelse"
+  }
+ }
+}
+Result: WatchOptions::
+{
+ "watchFactory": {
+  "name": "somefactory",
+  "myconfig": "somethingelse"
+ }
+}
+Result: Errors::
+
+Input:: {
+ "watchOptions": {
+  "watchFactory": {
+   "name": "somefactory/../malicious"
+  }
+ }
+}
+Result: WatchOptions::
+{}
+Result: Errors::
+[96mtsconfig.json[0m:[93m1[0m:[93m41[0m - [91merror[0m[90m TS5107: [0m'watchFactory' name can only be a package name.
+
+[7m1[0m {"watchOptions":{"watchFactory":{"name":"somefactory/../malicious"}}}
+[7m [0m [91m                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96mtsconfig.json[0m:[93m1[0m:[93m41[0m - [91merror[0m[90m TS5107: [0m'watchFactory' name can only be a package name.
+
+[7m1[0m {"watchOptions":{"watchFactory":{"name":"somefactory/../malicious"}}}
+[7m [0m [91m                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
