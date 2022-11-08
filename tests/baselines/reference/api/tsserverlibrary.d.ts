@@ -1217,6 +1217,7 @@ declare namespace ts {
                 synchronousWatchDirectory?: boolean;
                 excludeDirectories?: string[];
                 excludeFiles?: string[];
+                watchFactory?: string | PluginImport;
                 [option: string]: CompilerOptionsValue | undefined;
             }
             /**
@@ -7008,7 +7009,7 @@ declare namespace ts {
         DynamicPriority = 2,
         FixedChunkSize = 3
     }
-    type CompilerOptionsValue = string | number | boolean | (string | number)[] | string[] | MapLike<string[]> | PluginImport[] | ProjectReference[] | null | undefined;
+    type CompilerOptionsValue = string | number | boolean | (string | number)[] | string[] | MapLike<string[]> | PluginImport | PluginImport[] | ProjectReference[] | null | undefined;
     interface CompilerOptions {
         allowImportingTsExtensions?: boolean;
         allowJs?: boolean;
@@ -7115,6 +7116,16 @@ declare namespace ts {
         useDefineForClassFields?: boolean;
         [option: string]: CompilerOptionsValue | TsConfigSourceFile | undefined;
     }
+    type UserWatchFactoryModule = (mod: {
+        typescript: typeof ts;
+        options: WatchOptions;
+        config: any;
+    }) => UserWatchFactory;
+    interface UserWatchFactory {
+        watchFile?(fileName: string, callback: FileWatcherCallback, pollingInterval: number, options: WatchOptions | undefined): FileWatcher;
+        watchDirectory?(fileName: string, callback: DirectoryWatcherCallback, recursive: boolean, options: WatchOptions | undefined): FileWatcher;
+        onConfigurationChanged?(config: any): void;
+    }
     interface WatchOptions {
         watchFile?: WatchFileKind;
         watchDirectory?: WatchDirectoryKind;
@@ -7122,6 +7133,7 @@ declare namespace ts {
         synchronousWatchDirectory?: boolean;
         excludeDirectories?: string[];
         excludeFiles?: string[];
+        watchFactory?: string | PluginImport;
         [option: string]: CompilerOptionsValue | undefined;
     }
     interface TypeAcquisition {

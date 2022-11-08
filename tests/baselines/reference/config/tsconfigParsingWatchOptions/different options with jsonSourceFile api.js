@@ -105,3 +105,27 @@ Result: Errors::
 
 [7m1[0m {"watchOptions":{"excludeFiles":["**/../*"]}}
 [7m [0m [91m                                 ~~~~~~~~~[0m
+
+Input:: {
+ "watchOptions": {
+  "watchFactory": "somefactory"
+ }
+}
+Result: WatchOptions::
+{
+ "watchFactory": "somefactory"
+}
+Result: Errors::
+
+Input:: {
+ "watchOptions": {
+  "watchFactory": "somefactory/../malicious"
+ }
+}
+Result: WatchOptions::
+{}
+Result: Errors::
+[96mtsconfig.json[0m:[93m1[0m:[93m33[0m - [91merror[0m[90m TS5096: [0m'watchFactory' name can only be a package name.
+
+[7m1[0m {"watchOptions":{"watchFactory":"somefactory/../malicious"}}
+[7m [0m [91m                                ~~~~~~~~~~~~~~~~~~~~~~~~~~[0m

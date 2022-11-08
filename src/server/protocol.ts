@@ -1587,6 +1587,7 @@ export interface WatchOptions {
     synchronousWatchDirectory?: boolean;
     excludeDirectories?: string[];
     excludeFiles?: string[];
+    watchFactory?: string | PluginImport;
     [option: string]: CompilerOptionsValue | undefined;
 }
 

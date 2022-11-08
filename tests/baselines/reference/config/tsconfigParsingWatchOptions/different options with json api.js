@@ -107,3 +107,26 @@ Result: WatchOptions::
 }
 Result: Errors::
 [91merror[0m[90m TS5065: [0mFile specification cannot contain a parent directory ('..') that appears after a recursive directory wildcard ('**'): '**/../*'.
+
+Input:: {
+ "watchOptions": {
+  "watchFactory": "somefactory"
+ },
+ "compileOnSave": false
+}
+Result: WatchOptions::
+{
+ "watchFactory": "somefactory"
+}
+Result: Errors::
+
+Input:: {
+ "watchOptions": {
+  "watchFactory": "somefactory/../malicious"
+ },
+ "compileOnSave": false
+}
+Result: WatchOptions::
+{}
+Result: Errors::
+[91merror[0m[90m TS5096: [0m'watchFactory' name can only be a package name.
